@@ -1,12 +1,21 @@
-data_path : 
+EHRSHOT_DATA : 
   path : "D:DATA_EHRSHOT/EHRSHOT_ASSETS/EHRSHOT_ASSETS"
   data_csv : '/data/ehrshot.csv'
   path_to_labels_dir : '/benchmark/'
   path_to_splits_csv : '/splits/person_id_map.csv'
+
+EHRSHOT_METADATA:
+  path : "D:DATA_EHRSHOT/EHRSHOT_ASSETS/EHRSHOT_ASSETS/data_metadata"
   concept_info: '/concept.csv'
   care_site: '/care_site.csv'
   visit_occurrence : '/visit_occurrence.csv'
+
+HUG_SNOMED_DATA:
+  path : "D:DATA_EHRSHOT/EHRSHOT_ASSETS/EHRSHOT_ASSETS/hug_snomed_info"
   hug_snomed_info: "/concept_snomed_hug.parquet"
+  relations: "/connectivity.parquet"
+  official_release: "/released_version.parquet"
+
 
 vocab_data : 
   path : "vocab_data_prepare"
@@ -17,3 +26,15 @@ vocab_data :
 
 ontologies: 
   ULMS_info : "D:/ULMS/2025AA/META/MRCONSO.rrf"
+
+
+SAPBERT_PARAMETERS:
+  sapbert_path : "cambridgeltl/SapBERT-from-PubMedBERT-fulltext"
+  lora_rank: 8
+  lora_alpha : 16
+  target_modules : ["query", "key", "value"]
+  max_length: 96
+  lora_dropout : 0.1
+
+EMBEDDING_CONCEPT: 
+  ft_model : "C:/Users/yy/Desktop/codes_PhD/lora_sapbert_MIE/scripts/checkpoints/sapbert_lora_epoch_003.pt"

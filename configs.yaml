@@ -20,8 +20,6 @@ HUG_SNOMED_DATA:
 vocab_data : 
   path : "vocab_data_prepare"
   concept_with_label_count : "/vocab.parquet"
-  # path: "D:\\DATA_EHRSHOT\\EHRSHOT_ASSETS\\EHRSHOT_ASSETS\\vocab_data\\"
-  # concept_with_label_count: "vocab.parquet"
 
 
 ontologies: 
@@ -38,3 +36,9 @@ SAPBERT_PARAMETERS:
 
 EMBEDDING_CONCEPT: 
   ft_model : "C:/Users/yy/Desktop/codes_PhD/lora_sapbert_MIE/scripts/checkpoints/sapbert_lora_epoch_003.pt"
+  
+  cpt_snomed_ref_info : "embeddings/cpt_snomed_ref.parquet"
+  cpt_snomed_ref_emb : "embeddings/cpt_snomed_ref_emb.npy"
+
+  cpt_data_info : "embeddings/cpt_snomed_ref.parquet"
+  cpt_data_emb : "embeddings/cpt_snomed_ref_emb.npy"

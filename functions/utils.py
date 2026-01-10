@@ -1,5 +1,9 @@
 import yaml
 import polars as pl 
+import torch
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 
 def load_config() -> dict:
     config_path = "configs.yaml"
@@ -64,3 +68,6 @@ def load_ulms(config):
         )
     )
     return df_umls_filtered
+
+def get_tensor_from_numpy(np_array, device):
+    return torch.tensor(np_array, device=device, dtype=torch.float32)

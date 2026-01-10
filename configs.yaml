@@ -21,6 +21,8 @@ vocab_data :
   path : "vocab_data_prepare"
   concept_with_label_count : "/vocab.parquet"
 
+  mapping: "/vocab_mapping.parquet"
+
 
 ontologies: 
   ULMS_info : "D:/ULMS/2025AA/META/MRCONSO.rrf"
@@ -36,9 +38,9 @@ SAPBERT_PARAMETERS:
 
 EMBEDDING_CONCEPT: 
   ft_model : "C:/Users/yy/Desktop/codes_PhD/lora_sapbert_MIE/scripts/checkpoints/sapbert_lora_epoch_003.pt"
-  
+
   cpt_snomed_ref_info : "embeddings/cpt_snomed_ref.parquet"
   cpt_snomed_ref_emb : "embeddings/cpt_snomed_ref_emb.npy"
 
-  cpt_data_info : "embeddings/cpt_snomed_ref.parquet"
-  cpt_data_emb : "embeddings/cpt_snomed_ref_emb.npy"
+  cpt_ehrshot_info : "embeddings/cpt_ehrshot_ref.parquet"
+  cpt_ehrshot_emb : "embeddings/cpt_ehrshot_ref_emb.npy"
